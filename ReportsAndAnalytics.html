@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports and Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./reports.css">
+</head>
+<body>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <h2>Blood Bank Admin</h2>
+        <ul>
+            <li><a href="DonorManagement.html">Donor Management</a></li>
+            <li><a href="BloodInventory.html">Blood Inventory Management</a></li>
+            <li><a href="http://127.0.0.1:5500/RequestManagement.html">Request Management</a></li>
+            <li><a href="DonationDrive.html">Donation Drive</a></li>
+            <li><a href="http://127.0.0.1:5500/ReportsAndAnalytics.html" class="active">Reports and Analytics</a></li>
+            <li><a href="UserManagement.html">User Management</a></li>
+            
+            <li><a href="http://127.0.0.1:5500/settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h1>Reports and Analytics</h1>
+
+        <div class="dashboard-container">
+            <div class="chart-container">
+                <h2>Monthly Donations Overview</h2>
+                <canvas id="monthlyDonationsChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Blood Group Distribution</h2>
+                <canvas id="bloodGroupDistributionChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Blood Requests (Fulfilled vs Pending)</h2>
+                <canvas id="bloodRequestsChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Donor Growth Trend</h2>
+                <canvas id="donorGrowthChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="./analytics.js"></script>
+
+</body>
+</html>
+

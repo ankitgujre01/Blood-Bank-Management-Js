@@ -1,0 +1,254 @@
+/* Existing styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #2f4f2f; /* Dark green */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    position: fixed;
+    transition: width 0.3s ease;
+}
+.sidebar h2 {
+    text-align: center;
+    color: #e6f7e6; /* Light green */
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 20px 0;
+}
+.sidebar ul li a {
+    color: #e6f7e6; /* Light green */
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+.sidebar ul li a:hover {
+    color: #e63946; /* Bright red */
+}
+
+/* Main content section */
+.main-content {
+    margin-left: 350px;
+    width: calc(100% - 300px);
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #e63946; /* Bright red */
+    margin-bottom: 50px;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+form button {
+    padding: 10px 20px;
+    background-color: #2f4f2f; /* Dark green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #4f6f4f; /* Lighter green on hover */
+}
+
+/* Donor list and table styles */
+.donor-list {
+    margin-top: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.donor-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.donor-list th, .donor-list td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.donor-list th {
+    background-color: #2f4f2f; /* Dark green */
+    color: #fff;
+}
+.donor-list td {
+    background-color: #f9f9f9;
+}
+
+/* New Styles for Delete Button */
+.donor-list td button {
+    background-color: #e63946; /* Bright red delete button */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.donor-list td button:hover {
+    background-color: #c82828; /* Darker red on hover */
+}
+
+/* Filter box styles */
+.filter-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.filter-box input {
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* Donation history section */
+.history-box {
+    margin-top: 50px;
+}
+.history-box h2 {
+    color: #2f4f2f; /* Dark green */
+}
+.donation-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.donation-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+.donation-history ul li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Metrics and action boxes (dashboard style) */
+.metrics-grid, .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.metric-box, .action-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.metric-box:hover, .action-box:hover {
+    transform: scale(1.05);
+}
+.metric-box h2 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #2f4f2f; /* Dark green */
+}
+.metric-box p, .action-box p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #457b9d;
+}
+.action-box {
+    cursor: pointer;
+    background-color: #f8f9fa;
+}
+
+/* Chart container (for graphs) */
+.chart-container {
+    margin-top: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.chart-container h2 {
+    text-align: center;
+    color: #2f4f2f; /* Dark green */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+    }
+    .main-content {
+        margin-left: 270px;
+        width: calc(100% - 250px);
+    }
+    .metrics-grid, .actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding-top: 10px;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+    .metrics-grid, .actions-grid {
+        grid-template-columns: 1fr;
+    }
+    .filter-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filter-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4em;
+    }
+    .metric-box h2 {
+        font-size: 1.8em;
+    }
+    .donor-list table {
+        font-size: 0.9em;
+    }
+    form button, .donor-list td button {
+        padding: 6px 10px;
+    }
+}

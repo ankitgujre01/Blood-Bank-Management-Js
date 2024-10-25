@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+    </style> -->
+</head>
+<body>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <h2>Blood Bank Admin</h2>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/DonorManagement.html">Donor Management</a></li>
+            <li><a href="http://127.0.0.1:5500/BloodInventory.html">Blood Inventory Management</a></li>
+            <li><a href="http://127.0.0.1:5500/RequestManagement.html">Request Management</a></li>
+            <li><a href="#donation-drive">Donation Drive</a></li>
+            <li><a href="http://127.0.0.1:5500/ReportsAndAnalytics.html">Reports and Analytics</a></li>
+            <li><a href="http://127.0.0.1:5500/UserManagement.html">User Management</a></li>
+            
+            <li><a href="http://127.0.0.1:5500/settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="main-content">
+        <h1>Blood Bank Dashboard Overview</h1>
+        
+        <div class="dashboard-container">
+            <div class="metrics-grid">
+                <div class="metric-box animated" id="bloodUnits">
+                    <h2>0</h2>
+                    <p>Total Blood Units Available</p>
+                </div>
+                <div class="metric-box animated" id="expiringUnits">
+                    <h2>0</h2>
+                    <p>Blood Units Nearing Expiration</p>
+                </div>
+                <div class="metric-box animated" id="donationsToday">
+                    <h2>0</h2>
+                    <p>Donations Received Today</p>
+                </div>
+                <div class="metric-box animated" id="donationsWeek">
+                    <h2>0</h2>
+                    <p>Donations Received This Week</p>
+                </div>
+                <div class="metric-box animated" id="donationsMonth">
+                    <h2>0</h2>
+                    <p>Donations Received This Month</p>
+                </div>
+                <div class="metric-box animated" id="requestsFulfilled">
+                    <h2>0</h2>
+                    <p>Total Blood Requests Fulfilled</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Blood Group Availability</h2>
+                <canvas id="bloodGroupChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Donations Trend Over Time</h2>
+                <canvas id="donationsTrendChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Blood Request Trends (Fulfilled vs Pending)</h2>
+                <canvas id="requestTrendChart"></canvas>
+            </div>
+
+            <div class="actions-grid">
+                <div class="action-box" onclick="alert('Add New Donation Clicked')">
+                    <p>Add New Donation</p>
+                </div>
+                <div class="action-box" onclick="alert('Add New Blood Request Clicked')">
+                    <p>Add New Blood Request</p>
+                </div>
+                <div class="action-box" onclick="alert('Update Donor Information Clicked')">
+                    <p>Update Donor Information</p>
+                </div>
+            </div> 
+        </div>
+        <!-- <canvas><h1></h1></canvas> -->
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Management</title>
+    <link rel="stylesheet" href="./requestmanagement.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Blood Bank Admin</h2>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/DonorManagement.html">Donor Management</a></li>
+        <li><a href="http://127.0.0.1:5500/BloodInventory.html">Blood Inventory Management</a></li>
+        <li><a href="http://127.0.0.1:5500/RequestManagement.html">Request Management</a></li>
+        <li><a href="#donation-drive">Donation Drive</a></li>
+        <li><a href="http://127.0.0.1:5500/ReportsAndAnalytics.html">Reports and Analytics</a></li>
+        <li><a href="http://127.0.0.1:5500/UserManagement.html">User Management</a></li>
+        
+        <li><a href="http://127.0.0.1:5500/settings.html">Settings</a></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="container" style="margin-left: 350px;">
+    <h1>Request Management</h1>
+
+    <!-- Add New Request Form -->
+    <section>
+        <h2>Add New Request</h2>
+        <form id="requestForm">
+            <input type="text" id="patientName" placeholder="Patient Name" required>
+            <input type="text" id="bloodGroup" placeholder="Blood Group" required>
+            <input type="number" id="quantity" placeholder="Quantity" required>
+            <input type="date" id="requestDate" required>
+            <button type="submit">Add Request</button>
+        </form>
+    </section>
+
+    <!-- Request List -->
+    <section class="request-list">
+        <h2>View Request List</h2>
+        <div class="filter-box">
+            <input type="text" id="searchBloodGroup" placeholder="Search by Blood Group">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Blood Group</th>
+                    <th>Quantity</th>
+                    <th>Request Date</th>
+                </tr>
+            </thead>
+            <tbody id="requestTableBody">
+                <!-- Request rows will be inserted here -->
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="./RequestManagement.js"></script>
+
+</body>
+</html>

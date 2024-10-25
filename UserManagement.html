@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="./User.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Blood Bank Admin</h2>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/DonorManagement.html">Donor Management</a></li>
+        <li><a href="http://127.0.0.1:5500/BloodInventory.html">Blood Inventory Management</a></li>
+        <li><a href="http://127.0.0.1:5500/RequestManagement.html">Request Management</a></li>
+        <li><a href="#donation-drive">Donation Drive</a></li>
+        <li><a href="http://127.0.0.1:5500/ReportsAndAnalytics.html">Reports and Analytics</a></li>
+        <li><a href="http://127.0.0.1:5500/UserManagement.html">User Management</a></li>
+        
+        <li><a href="http://127.0.0.1:5500/settings.html">Settings</a></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="container" style="margin-left: 350px;"> <!-- Adjusted margin for sidebar -->
+    <h1>User Management</h1>
+
+    <!-- Add New User Form -->
+    <section>
+        <h2>Add New User</h2>
+        <form id="userForm">
+            <input type="text" id="userName" placeholder="User Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <select id="userRole" required>
+                <option value="">Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Manager">Manager</option>
+                <option value="Staff">Staff</option>
+            </select>
+            <button type="submit">Add User</button>
+        </form>
+    </section>
+
+    <!-- User List with Filter -->
+    <section class="user-list">
+        <h2>View User List</h2>
+        <div class="filter-box">
+            <input type="text" id="searchRole" placeholder="Search by Role">
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- User rows will be inserted here -->
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="./user.js"></script>
+
+</body>
+</html>
+
+

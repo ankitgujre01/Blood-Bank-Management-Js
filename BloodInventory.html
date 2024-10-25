@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Inventory Management</title>
+    <link rel="stylesheet" href="./bloodInventory.css">
+</head>
+<body>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <h2>Blood Bank Admin</h2>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/DonorManagement.html">Donor Management</a></li>
+            <li><a href="http://127.0.0.1:5500/BloodInventory.html">Blood Inventory Management</a></li>
+            <li><a href="http://127.0.0.1:5500/RequestManagement.html">Request Management</a></li>
+            <li><a href="#donation-drive">Donation Drive</a></li>
+            <li><a href="http://127.0.0.1:5500/ReportsAndAnalytics.html">Reports and Analytics</a></li>
+            <li><a href="http://127.0.0.1:5500/UserManagement.html">User Management</a></li>
+            
+            <li><a href="http://127.0.0.1:5500/settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <h1>Blood Inventory Management</h1>
+
+        <!-- Add New Blood Unit Form -->
+        <section>
+            <h2>Add New Blood Unit</h2>
+            <form id="bloodUnitForm">
+                <input type="text" id="bloodType" placeholder="Blood Type (e.g., A+, O-)" required>
+                <input type="number" id="quantity" placeholder="Quantity (units)" required>
+                <input type="date" id="expiryDate" placeholder="Expiry Date" required>
+                <button type="submit">Add Blood Unit</button>
+            </form>
+        </section>
+
+        <!-- Blood Inventory List with Filters -->
+        <section class="inventory-list">
+            <h2>View Blood Inventory</h2>
+            <div class="filter-box">
+                <input type="text" id="searchBloodType" placeholder="Search by Blood Type">
+                <input type="date" id="searchExpiryDate" placeholder="Search by Expiry Date">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Blood Type</th>
+                        <th>Quantity (units)</th>
+                        <th>Expiry Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                    <!-- Blood unit rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="./inventory.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="./settings.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Blood Bank Admin</h2>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/DonorManagement.html">Donor Management</a></li>
+        <li><a href="http://127.0.0.1:5500/BloodInventory.html">Blood Inventory Management</a></li>
+        <li><a href="http://127.0.0.1:5500/RequestManagement.html">Request Management</a></li>
+        <li><a href="#donation-drive">Donation Drive</a></li>
+        <li><a href="http://127.0.0.1:5500/ReportsAndAnalytics.html">Reports and Analytics</a></li>
+        <li><a href="http://127.0.0.1:5500/UserManagement.html">User Management</a></li>
+        
+        <li><a href="http://127.0.0.1:5500/settings.html">Settings</a></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="container" style="margin-left: 350px;">
+    <h1>Settings</h1>
+
+    <!-- Change Password Section -->
+    <section>
+        <h2>Change Password</h2>
+        <form id="changePasswordForm">
+            <input type="password" id="currentPassword" placeholder="Current Password" required>
+            <input type="password" id="newPassword" placeholder="New Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm New Password" required>
+            <button type="submit">Change Password</button>
+        </form>
+    </section>
+
+    <!-- Notification Preferences Section -->
+    <section>
+        <h2>Notification Preferences</h2>
+        <form id="notificationForm">
+            <label>
+                <input type="checkbox" id="emailNotifications" checked>
+                Email Notifications
+            </label>
+            <label>
+                <input type="checkbox" id="smsNotifications">
+                SMS Notifications
+            </label>
+            <button type="submit">Update Preferences</button>
+        </form>
+    </section>
+
+    <!-- Account Information Section -->
+    <section>
+        <h2>Account Information</h2>
+        <form id="accountInfoForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Update Account Info</button>
+        </form>
+    </section>
+</div>
+
+<script src="./settings.js"></script>
+</body>
+</html>

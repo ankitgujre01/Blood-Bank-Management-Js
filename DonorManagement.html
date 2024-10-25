@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Management</title>
+    <link rel="stylesheet" href="./Donor.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Blood Bank Admin</h2>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/DonorManagement.html">Donor Management</a></li>
+        <li><a href="http://127.0.0.1:5500/BloodInventory.html">Blood Inventory Management</a></li>
+        <li><a href="http://127.0.0.1:5500/RequestManagement.html">Request Management</a></li>
+        <li><a href="#donation-drive">Donation Drive</a></li>
+        <li><a href="http://127.0.0.1:5500/ReportsAndAnalytics.html">Reports and Analytics</a></li>
+        <li><a href="http://127.0.0.1:5500/UserManagement.html">User Management</a></li>
+        
+        <li><a href="http://127.0.0.1:5500/settings.html">Settings</a></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="container" style="margin-left: 350px;"> <!-- Adjusted margin for sidebar -->
+    <h1>Donor Management</h1>
+
+    <!-- Add New Donor Form -->
+    <section>
+        <h2>Add New Donor</h2>
+        <form id="donorForm">
+            <input type="text" id="donorName" placeholder="Donor Name" required>
+            <input type="text" id="contact" placeholder="Contact" required>
+            <select id="bloodGroup" required>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+            <input type="date" id="lastDonationDate" placeholder="Last Donation Date">
+            <button type="submit">Add Donor</button>
+        </form>
+    </section>
+
+    <!-- Donor List with Filter -->
+    <section class="donor-list">
+        <h2>View Donor List</h2>
+        <div class="filter-box">
+            <input type="text" id="searchBloodGroup" placeholder="Search by Blood Group">
+            <input type="date" id="searchLastDonationDate" placeholder="Search by Last Donation Date">
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Blood Group</th>
+                <th>Last Donation Date</th>
+            </tr>
+            </thead>
+            <tbody id="donorTableBody">
+                <!-- Donor rows will be inserted here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Donor History -->
+    <section class="history-box">
+        <h2>Donor History</h2>
+        <div class="donation-history" id="donorHistory">
+            <p>Select a donor to view their history.</p>
+        </div>
+    </section>
+</div>
+
+<script src="./donor.js"></script>
+
+</body>
+</html>

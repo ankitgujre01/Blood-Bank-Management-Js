@@ -1,0 +1,90 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color:  #155724; /* Changed to a red color */
+    color: white;
+    padding-top: 50px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #ffffff; /* White for contrast */
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff; /* Keep link color white */
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color:  #e63946; /* Green on hover */
+}
+
+/* Main content section */
+.container {
+    margin-left: 350px; /* Adjusted margin for the sidebar */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #28a745; /* Changed to green */
+    margin-bottom: 50px;
+}
+
+/* Section styling */
+section {
+    margin-top: 50px;
+}
+
+/* Form styles */
+form {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #e63946; /* Red button background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c72c39; /* Darker red on hover */
+}
